@@ -1,0 +1,32 @@
+{
+  "name" : "hr-cohesion-funds-2007-2016",
+  "title" : "Croatia Cohesion Funds for 2006 to 2016",
+  "license" : "",
+  "sources" : [
+    {
+      "name": "Croatian website",
+      "web": "http://www.strukturnifondovi.hr/UserDocsImages/Documents/KartaProjekataZaWeb%201.4.2016.xls"
+    }
+  ],
+  "author": "Anna Alberts <anna.alberts@okfn.de>",
+  "resources": [
+    {
+      "path": "data/KartaProjekataZaWeb_1.4.2016.xls",
+      "schema": {
+  "fields": [
+    {
+      "name": "name of field (e.g. column name)",
+      "title": "A nicer human readable label or title for the field",
+      "type": "A string specifying the type",
+      "format": "A string specifying a format",
+      "description": "A description for the field"
+    },
+  ],
+    "primaryKey": ""
+    "foreignKeys": ""
+}
+
+
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+
+  // REQUIRED (DataPackage): a url-compatible short name ("slug")
+  // for the package
+  "name": "hr-cohesion-funds-2007-2016",
+
+  // REQUIRED (DataPackage): a human readable title for the package
+  "title": "Croatia Cohesion Funds for 2006 to 2016",
+
+  // RECOMMENDED (DataPackage): the license for the data in this
+  // package.
+  "license": "cc-by 3.0",
+
+  "sources" : [
+    {
+      "name": "Croatian website",
+      "web": "http://www.strukturnifondovi.hr/UserDocsImages/Documents/KartaProjekataZaWeb%201.4.2016.xls"
+    }
+  ],
+  "author": "Anna Alberts <anna.alberts@okfn.de>",
+
+  // RECOMMENDED: other properties such as description, homepage,
+  // version, sources, author, contributors, keywords, as specified
+  // in dataprotocols.org/data-packages/
+
+  // RECOMMENDED: a valid 2-digit ISO country code (ISO 3166-1
+  // alpha-2), or, an array of valid ISO codes (if this relates to
+  // multiple countries). This field is for listing the country of
+  // countries associated to this data.  For example, if this the
+  // budget for country then you would put that country's ISO code.
+  "countryCode": "hr", // or [ "au", "nz" ]
+
+  // RECOMMENDED: the "profile set" for this package. If the
+  // `profiles` key is present, it MUST be set to the following
+  // hash:
+  "profiles": {
+    "fiscal": "*",
+    "tabular": "*"
+  },
+
+  // OPTIONAL: a keyword that represents the type of spend data:
+  //   * "transaction": rows have dates and correspond to
+  //     individual transactions
+  //   * "aggregated": rows are summaries of expenditure across a
+  //     fiscal period
+  "granularity": "aggregated",
+
+  // OPTIONAL: the fiscal period of the dataset
+  "fiscalPeriod": {
+    "start": "2006-01-01",
+    "end": "2016-12-31"
+  },
+
+  // OPTIONAL: ...other properties...
+
+  // REQUIRED: array of CSV files contained in the package. Defined
+  // in http://dataprotocols.org/data-packages/ and
+  // http://dataprotocols.org/tabular-data-package/ . Note:
+  //   * Each data file `MUST` have an entry in the `resources`
+  //     array
+  //   * That entry in the `resources` array `MUST` have a JSON
+  //     table schema describing the data file.
+  //     (see http://dataprotocols.org/json-table-schema/)
+  //    * Each entry must have a `name` attribute in order to be referenced
+  //      in the `model` section.
+
+  "resources": [ /* ... */ ],
+  "path": "data/KartaProjekataZaWeb_1.4.2016.xls"
+  // REQUIRED, see "Model"
+  "model": {
+
+    // REQUIRED: the measures object in logical model
+    "measures": {
+      "grants"
+    },
+
+    // REQUIRED: the dimensions object in logical model
+    "dimensions": {
+      /* ... */ // REQUIRED at least 1: see "Dimensions"
+    }
+  }
+
+}
+
