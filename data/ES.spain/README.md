@@ -1,1 +1,1 @@
--emtpy-
+The landing page for ERDF is here: http://www.dgfc.sepg.minhap.gob.es/sitios/dgfc/es-ES/Paginas/BeneficiariosFederCohesion.aspx
